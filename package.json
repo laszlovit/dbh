@@ -7,7 +7,10 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
-		"typegen": "sanity schema extract --path=src/sanity/extract.json && sanity typegen generate && rm ./src/sanity/extract.json"
+		"typegen": "sanity schema extract --path=src/sanity/extract.json && sanity typegen generate && rm ./src/sanity/extract.json",
+		"prettier": "prettier --check .",
+		"format": "prettier --write .",
+		"prepare": "husky"
 	},
 	"dependencies": {
 		"@fancyapps/ui": "^5.0.36",
@@ -36,6 +39,7 @@
 		"@types/react-dom": "^18",
 		"eslint": "^9.15.0",
 		"eslint-config-next": "^15.1.0",
+		"husky": "^9.1.7",
 		"postcss": "^8.4.49",
 		"prettier": "^3.3.3",
 		"prettier-plugin-organize-imports": "^4.1.0",

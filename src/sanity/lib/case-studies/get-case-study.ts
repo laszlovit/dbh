@@ -1,5 +1,5 @@
-import { sanityFetch } from '@/sanity/lib/live'
-import { defineQuery } from 'next-sanity'
+import { sanityFetch } from "@/sanity/lib/live";
+import { defineQuery } from "next-sanity";
 
 const CASE_STUDY_QUERY = defineQuery(/* groq */ `*[
   _type == "caseStudy"
@@ -22,16 +22,16 @@ const CASE_STUDY_QUERY = defineQuery(/* groq */ `*[
     logo,
   },
 }
-`)
+`);
 
 export const getCaseStudy = async (slug: string) => {
-  try {
-    const caseStudy = await sanityFetch({
-      query: CASE_STUDY_QUERY,
-      params: { slug },
-    })
-    return caseStudy.data
-  } catch (error) {
-    console.error('Error fetching case study', error)
-  }
-}
+	try {
+		const caseStudy = await sanityFetch({
+			query: CASE_STUDY_QUERY,
+			params: { slug },
+		});
+		return caseStudy.data;
+	} catch (error) {
+		console.error("Error fetching case study", error);
+	}
+};

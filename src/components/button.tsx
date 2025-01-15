@@ -5,19 +5,19 @@ import { Link } from "./link";
 const variants = {
 	primary: clsx(
 		"inline-flex items-center justify-center px-6 py-3",
-		"shadow-md rounded-md border border-transparent bg-primary font-semibold",
+		"rounded-md border border-transparent bg-primary font-semibold shadow-md",
 		"whitespace-nowrap text-white",
 		"data-[disabled]:bg-primary data-[disabled]:opacity-40 data-[hover]:opacity-80",
 	),
 	secondary: clsx(
 		"inline-flex items-center justify-center px-6 py-3",
-		"shadow-md rounded-md border border-transparent bg-white font-semibold",
+		"rounded-md border border-transparent bg-white font-semibold shadow-md",
 		"whitespace-nowrap",
 		"data-[disabled]:bg-primary data-[disabled]:opacity-40 data-[hover]:opacity-80",
 	),
 	outline: clsx(
 		"inline-flex items-center justify-center px-6 py-3",
-		"shadow rounded-md border border-transparent ring-1 ring-black/10",
+		"rounded-md border border-transparent shadow ring-1 ring-black/10",
 		"whitespace-nowrap font-semibold",
 		"data-[disabled]:bg-transparent data-[hover]:bg-gray-50 data-[disabled]:opacity-40",
 	),

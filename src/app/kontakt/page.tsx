@@ -37,8 +37,8 @@ function Intro() {
 	return (
 		<>
 			<section className="px-[5%] py-8 md:py-12 lg:py-14">
-				<div className="max-w-7xl mx-auto">
-					<div className="rb-12 max-w-2xl mx-auto mb-12 text-center md:mb-18 lg:mb-20">
+				<div className="mx-auto max-w-7xl">
+					<div className="rb-12 md:mb-18 mx-auto mb-12 max-w-2xl text-center lg:mb-20">
 						<h1 className="rb-5 mb-5 text-4xl font-bold sm:text-5xl md:mb-6">
 							Ræk ud. Vi er her for at lytte.
 						</h1>
@@ -50,9 +50,9 @@ function Intro() {
 						{contacts.map((contact, index) => (
 							<div
 								key={index}
-								className="shadow-sm rounded-lg bg-white p-6 ring-1 ring-black/5 md:p-8"
+								className="rounded-lg bg-white p-6 shadow-sm ring-1 ring-black/5 md:p-8"
 							>
-								<div className="shadow-sm mb-5 w-fit rounded-md bg-lightGray p-1 ring-1 ring-black/10 lg:mb-6">
+								<div className="mb-5 w-fit rounded-md bg-lightGray p-1 shadow-sm ring-1 ring-black/10 lg:mb-6">
 									<div className="text-primary">{contact.icon}</div>
 								</div>
 								<h2 className="mb-3 text-xl font-bold leading-[1.4] md:text-3xl lg:mb-4 lg:text-3xl">
@@ -69,7 +69,7 @@ function Intro() {
 								src="https://cdn.sanity.io/images/11915si6/production/fccd6cf84822a3fcf54662be0ff2582ade71d417-1400x650.jpg?fit=max&w=1200&h=1200&auto=format"
 								alt=""
 								loading="lazy"
-								className="shadow-xl size-full rounded-lg object-cover outline-1 -outline-offset-1 outline-black/10"
+								className="size-full rounded-lg object-cover shadow-xl outline-1 -outline-offset-1 outline-black/10"
 							/>
 						</div>
 					</div>

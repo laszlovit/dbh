@@ -10,7 +10,7 @@ export default function CallToAction() {
 							<h2 className="mb-3 text-4xl font-bold leading-[1.2] text-white sm:text-5xl md:mb-4 md:text-5xl">
 								Klar til at få professionel rengøring?
 							</h2>
-							<p className="max-w-2xl text-white md:text-md">
+							<p className="md:text-md max-w-2xl text-white">
 								Kontakt os i dag for at få et tilbud på tilpasset rengøring til din virksomhed.
 								Vores team er klar til at hjælpe dig med dine behov. Ring nu eller få et
 								uforpligtende tilbud!
