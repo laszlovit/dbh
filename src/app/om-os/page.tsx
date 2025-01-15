@@ -1,3 +1,4 @@
+import { BeforeAfterSlider } from "@/components/before-after-slider";
 import CallToAction from "@/components/call-to-action";
 import { Footer } from "@/components/footer";
 import Testimonials from "@/components/home/testimonials";
@@ -15,7 +16,7 @@ function AboutUs() {
 		<section className="px-[5%] py-8 md:py-12 lg:py-14">
 			<div className="mx-auto max-w-screen-2xl">
 				<div className="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
-					<div className="space-y-6">
+					<div className="max-w-2xl space-y-6">
 						<p className="md:text-md">
 							De Blå Helte er en afdeling af CBL Service ApS, som ejes og administreres af Claus
 							Bjerrum Langendorff.
@@ -43,13 +44,7 @@ function AboutUs() {
 							også ham selv, som besvarer telefonen, når du ringer.
 						</p>
 					</div>
-					<div>
-						<img
-							src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-							className="w-full object-cover"
-							alt="Relume placeholder image"
-						/>
-					</div>
+					<BeforeAfterSlider />
 				</div>
 			</div>
 		</section>
