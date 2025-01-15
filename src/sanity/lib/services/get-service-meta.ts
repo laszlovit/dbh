@@ -1,5 +1,5 @@
-import { sanityFetch } from '@/sanity/lib/live'
-import { defineQuery } from 'next-sanity'
+import { sanityFetch } from "@/sanity/lib/live";
+import { defineQuery } from "next-sanity";
 
 const SERVICE_META_QUERY = defineQuery(/* groq */ `*[
   _type == "service"
@@ -19,17 +19,17 @@ const SERVICE_META_QUERY = defineQuery(/* groq */ `*[
     }
   },
 }
-`)
+`);
 
 export const getServiceMeta = async (slug: string) => {
-  try {
-    const serviceMeta = await sanityFetch({
-      query: SERVICE_META_QUERY,
-      stega: false,
-      params: { slug },
-    })
-    return serviceMeta.data
-  } catch (error) {
-    console.error('Error fetching service meta', error)
-  }
-}
+	try {
+		const serviceMeta = await sanityFetch({
+			query: SERVICE_META_QUERY,
+			stega: false,
+			params: { slug },
+		});
+		return serviceMeta.data;
+	} catch (error) {
+		console.error("Error fetching service meta", error);
+	}
+};

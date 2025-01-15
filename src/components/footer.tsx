@@ -52,7 +52,7 @@ export const Footer = (props: FooterProps) => {
 	};
 	return (
 		<footer className="px-[5%] py-6 md:py-9 lg:py-10">
-			<div className="shadow-sm mx-auto max-w-screen-2xl rounded-lg bg-white ring-1 ring-black/5">
+			<div className="mx-auto max-w-screen-2xl rounded-lg bg-white shadow-sm ring-1 ring-black/5">
 				<div className="grid grid-cols-1 gap-x-[4vw] gap-y-12 p-8 md:gap-y-16 md:p-12 lg:grid-cols-[1fr_0.5fr] lg:gap-y-4">
 					<div className="col-span-2 md:col-span-1">
 						<div className="rb-6 mb-6 md:mb-8">

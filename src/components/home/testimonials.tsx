@@ -16,7 +16,7 @@ export default async function Testimonials() {
 							loading="lazy"
 						/>
 					</div>
-					<div className="shadow-sm order-2 h-full rounded-lg bg-white ring-1 ring-black/5">
+					<div className="order-2 h-full rounded-lg bg-white shadow-sm ring-1 ring-black/5">
 						<DynamicHomeTestimonials testimonials={testimonials} />
 					</div>
 				</div>

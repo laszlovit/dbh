@@ -59,7 +59,7 @@ export default function WhyUs() {
 						{features.map((feature, index) => (
 							<div
 								key={index}
-								className="shadow-sm flex self-start rounded-lg bg-white p-8 ring-1 ring-black/5"
+								className="flex self-start rounded-lg bg-white p-8 shadow-sm ring-1 ring-black/5"
 							>
 								<div className="mr-6 flex-none self-start">{feature.icon}</div>
 								<div>

@@ -64,7 +64,7 @@ export default function HomeTestimonials({
 								</blockquote>
 								<div className="mt-auto flex flex-row justify-between">
 									<div className="flex flex-col">
-										<p className="font-semibold md:text-md">{testimonial.name}</p>
+										<p className="md:text-md font-semibold">{testimonial.name}</p>
 										<p className="md:text-md">
 											<span>{testimonial.role}</span>
 										</p>

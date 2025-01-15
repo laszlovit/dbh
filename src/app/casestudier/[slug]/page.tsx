@@ -50,14 +50,14 @@ export default async function SelectedCaseStudyPage({ params }: Props) {
 			<div className="relative bg-primary/10 bg-[url(/dot-texture.svg)] pt-16 sm:px-6 lg:px-8 lg:pt-24">
 				<Container className="relative">
 					<div className="flex flex-col items-center justify-center gap-x-8 gap-y-12">
-						<div className="lg:max-w-2xl flex flex-col justify-center text-center">
+						<div className="flex flex-col justify-center text-center lg:max-w-2xl">
 							<p className="text-sm font-medium text-gray-900">Casestudier</p>
 							<Heading as="h1" className="mt-2">
 								{caseStudy.title}
 							</Heading>
 						</div>
-						<div className="max-w-4xl w-full">
-							<div className="shadow-xl relative z-20 -mb-40 flex w-full flex-col rounded-xl bg-white p-2 shadow-black/5 ring-1 ring-slate-900/5">
+						<div className="w-full max-w-4xl">
+							<div className="relative z-20 -mb-40 flex w-full flex-col rounded-xl bg-white p-2 shadow-xl shadow-black/5 ring-1 ring-slate-900/5">
 								{caseStudy.mainImage && (
 									<img
 										src={image(caseStudy.mainImage).url()}
@@ -95,7 +95,7 @@ export default async function SelectedCaseStudyPage({ params }: Props) {
 			</div>
 			<main className="mt-64 pb-24">
 				<Container>
-					<div className="max-w-2xl mx-auto space-y-10">
+					<div className="mx-auto max-w-2xl space-y-10">
 						<h2 className="text-2xl/8 font-semibold tracking-tight text-gray-950">Oversigt</h2>
 						{caseStudy.body && (
 							<PortableText
