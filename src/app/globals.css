@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--font-inter);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-outfit);
+}
+
+@layer components {
+	.radio-item[data-state="checked"] {
+		@apply !border-primary !bg-primary;
+	}
+
+	.checkbox-item[data-state="checked"] {
+		@apply !border-primary !bg-primary;
+	}
+}
+
+@keyframes loop-horizontally {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+.animate-loop-horizontally {
+	animation: loop-horizontally 20s linear infinite;
+	-webkit-transform: translateZ(0); /* Safari hack */
+}

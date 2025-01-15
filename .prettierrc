@@ -1,0 +1,11 @@
+
+{
+	"useTabs": true,
+	"singleQuote": false,
+	"printWidth": 100,
+	"trailingComma": "all",
+   	"tailwindFunctions": ["clsx"],
+	"plugins": ["prettier-plugin-organize-imports", "prettier-plugin-tailwindcss"],
+	"tailwindStylesheet": "./src/app/globals.css"
+}
+
