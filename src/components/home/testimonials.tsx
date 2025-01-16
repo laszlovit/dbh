@@ -10,7 +10,7 @@ export default async function Testimonials() {
 				<div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:items-center md:gap-8">
 					<div className="order-1 h-full rounded-lg outline-1 -outline-offset-1 outline-black/10">
 						<img
-							src="https://cdn.sanity.io/images/11915si6/production/3421300d1e27d1e10a40b5b8252a485413785f1c-1504x1204.jpg?fit=max&w=1200&h=1200&auto=format"
+							src="https://cdn.sanity.io/images/11915si6/production/de40e4588b112e67c60927e02dcb0a985a409467-1200x961.jpg?format=auto"
 							className="size-full rounded-lg object-cover"
 							alt=""
 							loading="lazy"

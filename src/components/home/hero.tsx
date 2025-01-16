@@ -37,7 +37,7 @@ function LogoCloudBento() {
 					Betroet af vores værdifulde kunder
 				</h1>
 			</div>
-			<div className="flex items-center pt-7 md:pt-0">
+			<div className="flex w-full items-center pt-7 md:pt-0">
 				{Array(2)
 					.fill(0)
 					.map((_, index) => (

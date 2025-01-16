@@ -3,17 +3,17 @@ import { ReactCompareSlider, ReactCompareSliderImage } from "react-compare-slide
 export const BeforeAfterSlider = () => {
 	return (
 		<ReactCompareSlider
-			className="rounded-lg"
+			className="h-full rounded-lg"
 			itemOne={
 				<ReactCompareSliderImage
-					src="https://static.wixstatic.com/media/1f358e_6a26a2e79e554c3793176f24fb4f5e72~mv2.png/v1/fill/w_600,h_450,q_85,usm_0.66_1.00_0.01/1f358e_6a26a2e79e554c3793176f24fb4f5e72~mv2.png"
+					src="https://cdn.sanity.io/images/11915si6/production/e54613c996ea0ac4df3ea53e78a8e22b0e7b5e24-1200x961.jpg?format=auto"
 					alt="Image one"
 					className="w-full rounded-lg object-cover"
 				/>
 			}
 			itemTwo={
 				<ReactCompareSliderImage
-					src="https://static.wixstatic.com/media/1f358e_b3b4e89b941f4609b28484787acd6330~mv2.png/v1/fill/w_600,h_450,q_85,usm_0.66_1.00_0.01/1f358e_b3b4e89b941f4609b28484787acd6330~mv2.png"
+					src="https://cdn.sanity.io/images/11915si6/production/de40e4588b112e67c60927e02dcb0a985a409467-1200x961.jpg?format=auto"
 					alt="w-full object-cover "
 				/>
 			}
