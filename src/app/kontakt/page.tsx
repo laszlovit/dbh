@@ -2,6 +2,23 @@ import CallToAction from "@/components/call-to-action";
 import { Footer } from "@/components/footer";
 import Navbar from "@/components/navigation-bar";
 import { EnvelopeIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/16/solid";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Kontakt De Blå Helte | Spørgsmål eller tilbud i Esbjerg",
+	description:
+		"Har du spørgsmål eller ønsker et tilbud? Kontakt De Blå Helte i Esbjerg via telefon eller email. Vi er klar til at hjælpe dig alle hverdage.",
+	openGraph: {
+		title: "Kontakt De Blå Helte | Spørgsmål eller tilbud i Esbjerg",
+		description:
+			"Har du spørgsmål eller ønsker et tilbud? Kontakt De Blå Helte i Esbjerg via telefon eller email. Vi er klar til at hjælpe dig alle hverdage.",
+		images: [
+			{
+				url: "https://cdn.sanity.io/images/11915si6/production/0e018acc33a91657268060541badaf802e8c85f0-1200x630.jpg",
+			},
+		],
+	},
+};
 
 function Intro() {
 	const contacts = [

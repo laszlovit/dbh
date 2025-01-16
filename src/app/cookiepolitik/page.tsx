@@ -1,6 +1,23 @@
 import { Footer } from "@/components/footer";
 import Navbar from "@/components/navigation-bar";
 import SubPageHeader from "@/components/sub-page-header";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Cookiepolitik | De Blå Helte - Brug af cookies på vores site",
+	description:
+		"Læs De Blå Heltes cookiepolitik for at forstå, hvordan vi bruger cookies til at forbedre din oplevelse på vores hjemmeside og beskytte dine data.",
+	openGraph: {
+		title: "Cookiepolitik | De Blå Helte - Brug af cookies på vores site",
+		description:
+			"Læs De Blå Heltes cookiepolitik for at forstå, hvordan vi bruger cookies til at forbedre din oplevelse på vores hjemmeside og beskytte dine data.",
+		images: [
+			{
+				url: "https://cdn.sanity.io/images/11915si6/production/0e018acc33a91657268060541badaf802e8c85f0-1200x630.jpg",
+			},
+		],
+	},
+};
 
 export default function Page() {
 	return (

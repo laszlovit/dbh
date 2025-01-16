@@ -4,7 +4,24 @@ import Navbar from "@/components/navigation-bar";
 import SubPageHeader from "@/components/sub-page-header";
 import { image } from "@/sanity/lib/image";
 import { getAllServices } from "@/sanity/lib/services/get-all-services";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+	title: "Services | Professionelle rengøringsløsninger i Esbjerg",
+	description:
+		"Se vores rengøringstjenester i Esbjerg: vinduesvask, fliserens, algebehandling, tagrenderens, solcellevask og erhvervsrengøring. Høj kvalitet og service.",
+	openGraph: {
+		title: "Services | Professionelle rengøringsløsninger i Esbjerg",
+		description:
+			"Se vores rengøringstjenester i Esbjerg: vinduespudsning, fliserens, algebehandling, tagrenderens, solcellevask og erhvervsrengøring. Høj kvalitet og service.",
+		images: [
+			{
+				url: "https://cdn.sanity.io/images/11915si6/production/0e018acc33a91657268060541badaf802e8c85f0-1200x630.jpg",
+			},
+		],
+	},
+};
 
 async function Services() {
 	const services = await getAllServices();

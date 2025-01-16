@@ -1,6 +1,23 @@
 import { Footer } from "@/components/footer";
 import Navbar from "@/components/navigation-bar";
 import SubPageHeader from "@/components/sub-page-header";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Privatlivspolitik | De Blå Helte - Beskyttelse af dine data",
+	description:
+		"Læs De Blå Heltes privatlivspolitik for at forstå, hvordan vi beskytter dine personlige oplysninger og overholder gældende databeskyttelseslove.",
+	openGraph: {
+		title: "Privatlivspolitik | De Blå Helte - Beskyttelse af dine data",
+		description:
+			"Læs De Blå Heltes privatlivspolitik for at forstå, hvordan vi beskytter dine personlige oplysninger og overholder gældende databeskyttelseslove.",
+		images: [
+			{
+				url: "https://cdn.sanity.io/images/11915si6/production/0e018acc33a91657268060541badaf802e8c85f0-1200x630.jpg",
+			},
+		],
+	},
+};
 
 export default function Page() {
 	return (
