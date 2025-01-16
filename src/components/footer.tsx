@@ -216,8 +216,8 @@ export const FooterDefaults: Props = {
 	],
 	footerText: "© 2025 De Blå Helte. All rights reserved.",
 	footerLinks: [
-		{ title: "Privatlivspolitik", url: "#" },
-		{ title: "Handelsbetingelser", url: "#" },
-		{ title: "Cookiepolitik", url: "#" },
+		{ title: "Privatlivspolitik", url: "/privatlivspolitik" },
+		{ title: "Handelsbetingelser", url: "/handelsbetingelser" },
+		{ title: "Cookiepolitik", url: "/cookiepolitik" },
 	],
 };
