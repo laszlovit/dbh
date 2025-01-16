@@ -81,7 +81,7 @@ export default function Hero() {
 										Serviceløsninger til private og erhvervskunder
 									</h1>
 									<p className="md:text-md">
-										Vinduesvask | Rengøring | Fliserens | Solcellerens | Algebehandling |
+										Vinduespudsning | Rengøring | Fliserens | Solcellerens | Algebehandling |
 										Myrebekæmpelse | Trappevask m.m. <br /> <br />
 										Vi tilbyder pålidelig opgaveløsning. Vores erfarne team sikrer høj kvalitet og
 										tilfredshed.

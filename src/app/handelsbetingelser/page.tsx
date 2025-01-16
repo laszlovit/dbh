@@ -1,6 +1,23 @@
 import { Footer } from "@/components/footer";
 import Navbar from "@/components/navigation-bar";
 import SubPageHeader from "@/components/sub-page-header";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Handelsbetingelser | De Blå Helte - Læs vore vilkår",
+	description:
+		"Læs De Blå Heltes handelsbetingelser for at forstå vores vilkår og betingelser ved køb af rengøringsservices og andre services i Esbjerg.",
+	openGraph: {
+		title: "Handelsbetingelser | De Blå Helte - Læs vore vilkår",
+		description:
+			"Læs De Blå Heltes handelsbetingelser for at forstå vores vilkår og betingelser ved køb af rengøringsservices og andre services i Esbjerg.",
+		images: [
+			{
+				url: "https://cdn.sanity.io/images/11915si6/production/0e018acc33a91657268060541badaf802e8c85f0-1200x630.jpg",
+			},
+		],
+	},
+};
 
 export default function Page() {
 	return (

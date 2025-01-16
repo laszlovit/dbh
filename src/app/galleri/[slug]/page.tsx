@@ -9,6 +9,8 @@ import { image } from "@/sanity/lib/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+// TODO: Add metadata
+
 type Props = {
 	params: Promise<{ slug: string }>;
 };

@@ -10,6 +10,23 @@ import {
 	SparklesIcon,
 	UserGroupIcon,
 } from "@heroicons/react/24/outline";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Om De Blå Helte | Troværdig rengøringspartner i Esbjerg",
+	description:
+		"Lær om De Blå Helte, en del af CBL Service ApS, ledet af Claus Bjerrum Langendorff. Vi vægter troværdighed, kvalitet og personlig service højt.",
+	openGraph: {
+		title: "Om De Blå Helte | Troværdig rengøringspartner i Esbjerg",
+		description:
+			"Lær om De Blå Helte, en del af CBL Service ApS, ledet af Claus Bjerrum Langendorff. Vi vægter troværdighed, kvalitet og personlig service højt.",
+		images: [
+			{
+				url: "https://cdn.sanity.io/images/11915si6/production/0e018acc33a91657268060541badaf802e8c85f0-1200x630.jpg",
+			},
+		],
+	},
+};
 
 function AboutUs() {
 	return (

@@ -4,7 +4,24 @@ import Navbar from "@/components/navigation-bar";
 import SubPageHeader from "@/components/sub-page-header";
 import { getAllGalleries } from "@/sanity/lib/galleries/get-all-galleries";
 import { image } from "@/sanity/lib/image";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+	title: "Galleri | Se De Blå Heltes arbejde og resultater",
+	description:
+		"Få et indblik i De Blå Heltes professionelle arbejde. Se billeder af vores rengøring, vinduesvask, fliserens, tagrenderens og mere i vores galleri.",
+	openGraph: {
+		title: "Galleri | Se De Blå Heltes arbejde og resultater",
+		description:
+			"Få et indblik i De Blå Heltes professionelle arbejde. Se billeder af vores rengøring, vinduesvask, fliserens, tagrenderens og mere i vores galleri.",
+		images: [
+			{
+				url: "https://cdn.sanity.io/images/11915si6/production/0e018acc33a91657268060541badaf802e8c85f0-1200x630.jpg",
+			},
+		],
+	},
+};
 
 async function Galleries() {
 	const galleries = await getAllGalleries();
