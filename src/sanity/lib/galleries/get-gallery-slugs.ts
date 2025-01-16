@@ -3,7 +3,8 @@ import { defineQuery } from "next-sanity";
 
 const GALLERY_SLUGS_QUERY = defineQuery(/* groq */ `
   *[_type == "gallery"]{
-    "slug": slug.current
+    "slug": slug.current,
+	_updatedAt
   }
 `);
 
