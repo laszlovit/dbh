@@ -8,16 +8,16 @@ import { Button } from "./button";
 
 // Define the validation schema using zod
 const quoteFormSchema = z.object({
-	firstName: z.string().min(1, "Fornavn is required"),
-	lastName: z.string().min(1, "Efternavn is required"),
+	fornavn: z.string().min(1, "Fornavn is required"),
+	efternavn: z.string().min(1, "Efternavn is required"),
 	email: z.string().email("Invalid email address"),
-	phone: z.string().min(1, "Telefonnummer is required"),
+	telefon: z.string().min(1, "Telefonnummer is required"),
 	service: z.string().min(1, "Service is required"),
-	street: z.string().min(1, "Gade is required"),
-	apartment: z.string().optional(),
-	city: z.string().min(1, "By is required"),
-	postalCode: z.string().min(1, "Postnummer is required"),
-	message: z.string().optional(),
+	gade: z.string().min(1, "Gade is required"),
+	etageEllerNummer: z.string().optional(),
+	by: z.string().min(1, "By is required"),
+	postnummer: z.string().min(1, "Postnummer is required"),
+	besked: z.string().optional(),
 });
 
 type QuoteFormData = z.infer<typeof quoteFormSchema>;
@@ -111,35 +111,35 @@ export default function QuoteForm() {
 				>
 					<div className="grid grid-cols-2 gap-6">
 						<div className="col-span-2 grid w-full items-center md:col-span-1">
-							<label htmlFor="firstName" className="block font-semibold text-gray-900">
+							<label htmlFor="fornavn" className="block font-semibold text-gray-900">
 								Fornavn <span className="text-red-500">&#42;</span>
 							</label>
 							<div className="mt-2.5">
 								<input
 									type="text"
-									id="firstName"
-									{...register("firstName")}
+									id="fornavn"
+									{...register("fornavn")}
 									className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-primary"
 								/>
-								{errors.firstName && (
-									<span className="text-red-500">{errors.firstName.message as string}</span>
+								{errors.fornavn && (
+									<span className="text-red-500">{errors.fornavn.message as string}</span>
 								)}
 							</div>
 						</div>
 
 						<div className="col-span-2 grid w-full items-center md:col-span-1">
-							<label htmlFor="lastName" className="block font-semibold text-gray-900">
+							<label htmlFor="efternavn" className="block font-semibold text-gray-900">
 								Efternavn <span className="text-red-500">&#42;</span>
 							</label>
 							<div className="mt-2.5">
 								<input
 									type="text"
-									id="lastName"
-									{...register("lastName")}
+									id="efternavn"
+									{...register("efternavn")}
 									className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-primary"
 								/>
-								{errors.lastName && (
-									<span className="text-red-500">{errors.lastName.message as string}</span>
+								{errors.efternavn && (
+									<span className="text-red-500">{errors.efternavn.message as string}</span>
 								)}
 							</div>
 						</div>
@@ -164,18 +164,18 @@ export default function QuoteForm() {
 						</div>
 
 						<div className="col-span-2 grid w-full items-center md:col-span-1">
-							<label htmlFor="phone" className="block font-semibold text-gray-900">
+							<label htmlFor="telefon" className="block font-semibold text-gray-900">
 								Telefonnummer <span className="text-red-500">&#42;</span>
 							</label>
 							<div className="mt-2.5">
 								<input
 									type="tel"
-									id="phone"
-									{...register("phone")}
+									id="telefon"
+									{...register("telefon")}
 									className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-primary"
 								/>
-								{errors.phone && (
-									<span className="text-red-500">{errors.phone.message as string}</span>
+								{errors.telefon && (
+									<span className="text-red-500">{errors.telefon.message as string}</span>
 								)}
 							</div>
 						</div>
@@ -212,35 +212,35 @@ export default function QuoteForm() {
 
 					<div className="grid grid-cols-2 gap-6">
 						<div className="col-span-2 grid w-full items-center md:col-span-1">
-							<label htmlFor="street" className="block font-semibold text-gray-900">
+							<label htmlFor="gade" className="block font-semibold text-gray-900">
 								Gade
 							</label>
 							<div className="mt-2.5">
 								<input
 									type="text"
-									id="street"
-									{...register("street")}
+									id="gade"
+									{...register("gade")}
 									className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-primary"
 								/>
-								{errors.street && (
-									<span className="text-red-500">{errors.street.message as string}</span>
+								{errors.gade && (
+									<span className="text-red-500">{errors.gade.message as string}</span>
 								)}
 							</div>
 						</div>
 
 						<div className="col-span-2 grid w-full items-center md:col-span-1">
-							<label htmlFor="apartment" className="block font-semibold text-gray-900">
+							<label htmlFor="etageEllerNummer" className="block font-semibold text-gray-900">
 								Evt. etage/nummer
 							</label>
 							<div className="mt-2.5">
 								<input
 									type="text"
-									id="apartment"
-									{...register("apartment")}
+									id="etageEllerNummer"
+									{...register("etageEllerNummer")}
 									className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-primary"
 								/>
-								{errors.apartment && (
-									<span className="text-red-500">{errors.apartment.message as string}</span>
+								{errors.etageEllerNummer && (
+									<span className="text-red-500">{errors.etageEllerNummer.message as string}</span>
 								)}
 							</div>
 						</div>
@@ -248,52 +248,50 @@ export default function QuoteForm() {
 
 					<div className="grid grid-cols-2 gap-6">
 						<div className="col-span-2 grid w-full items-center md:col-span-1">
-							<label htmlFor="city" className="block font-semibold text-gray-900">
+							<label htmlFor="by" className="block font-semibold text-gray-900">
 								By
 							</label>
 							<div className="mt-2.5">
 								<input
 									type="text"
-									id="city"
-									{...register("city")}
+									id="by"
+									{...register("by")}
 									className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-primary"
 								/>
-								{errors.city && (
-									<span className="text-red-500">{errors.city.message as string}</span>
-								)}
+								{errors.by && <span className="text-red-500">{errors.by.message as string}</span>}
 							</div>
 						</div>
 
 						<div className="col-span-2 grid w-full items-center md:col-span-1">
-							<label htmlFor="postalCode" className="block font-semibold text-gray-900">
+							<label htmlFor="postnummer" className="block font-semibold text-gray-900">
 								Postnummer
 							</label>
 							<div className="mt-2.5">
 								<input
 									type="text"
-									id="postalCode"
-									{...register("postalCode")}
+									id="postnummer"
+									{...register("postnummer")}
 									className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-primary"
 								/>
-								{errors.postalCode && (
-									<span className="text-red-500">{errors.postalCode.message as string}</span>
+								{errors.postnummer && (
+									<span className="text-red-500">{errors.postnummer.message as string}</span>
 								)}
 							</div>
 						</div>
 					</div>
 
 					<div className="grid w-full items-center">
-						<label htmlFor="message" className="block font-semibold text-gray-900">
+						<label htmlFor="besked" className="block font-semibold text-gray-900">
 							Besked
 						</label>
 						<div className="mt-2.5">
 							<textarea
-								id="message"
-								{...register("message")}
+								id="besked"
+								{...register("besked")}
 								className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-primary"
 							/>
-							{errors.message && (
-								<span className="text-red-500">{errors.message.message as string}</span>
+							{errors.besked && (
+								<span className="text-red-500">{errors.besked.message as string}</span>
 							)}
 						</div>
 					</div>
