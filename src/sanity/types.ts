@@ -407,12 +407,6 @@ export type Category = {
 	description?: string;
 };
 
-export type Slug = {
-	_type: "slug";
-	current?: string;
-	source?: string;
-};
-
 export type BlockContent = Array<
 	| {
 			children?: Array<{
@@ -504,6 +498,21 @@ export type SanityImageMetadata = {
 	isOpaque?: boolean;
 };
 
+export type MediaTag = {
+	_id: string;
+	_type: "media.tag";
+	_createdAt: string;
+	_updatedAt: string;
+	_rev: string;
+	name?: Slug;
+};
+
+export type Slug = {
+	_type: "slug";
+	current?: string;
+	source?: string;
+};
+
 export type AllSanitySchemaTypes =
 	| SanityImagePaletteSwatch
 	| SanityImagePalette
@@ -517,13 +526,14 @@ export type AllSanitySchemaTypes =
 	| Seo
 	| Post
 	| Category
-	| Slug
 	| BlockContent
 	| SanityImageCrop
 	| SanityImageHotspot
 	| SanityImageAsset
 	| SanityAssetSourceData
-	| SanityImageMetadata;
+	| SanityImageMetadata
+	| MediaTag
+	| Slug;
 export declare const internalGroqTypeReferenceTo: unique symbol;
 // Source: ./src/sanity/lib/case-studies/get-all-case-studies.ts
 // Variable: ALL_CASE_STUDIES_QUERY
@@ -688,9 +698,10 @@ export type ALL_GALLERIES_QUERYResult = Array<{
 
 // Source: ./src/sanity/lib/galleries/get-gallery-slugs.ts
 // Variable: GALLERY_SLUGS_QUERY
-// Query: *[_type == "gallery"]{    "slug": slug.current  }
+// Query: *[_type == "gallery"]{    "slug": slug.current,	_updatedAt  }
 export type GALLERY_SLUGS_QUERYResult = Array<{
 	slug: string | null;
+	_updatedAt: string;
 }>;
 
 // Source: ./src/sanity/lib/galleries/get-gallery.ts
@@ -721,46 +732,6 @@ export type GALLERY_QUERYResult = {
 	}> | null;
 	slug: string | null;
 } | null;
-
-// Source: ./src/sanity/lib/testimonials/get-all-testimonials.ts
-// Variable: ALL_TESTIMONIALS_QUERY
-// Query: *[_type == "testimonial"] | order(publishedAt asc)
-export type ALL_TESTIMONIALS_QUERYResult = Array<{
-	_id: string;
-	_type: "testimonial";
-	_createdAt: string;
-	_updatedAt: string;
-	_rev: string;
-	name?: string;
-	slug?: Slug;
-	role?: string;
-	logo?: {
-		asset?: {
-			_ref: string;
-			_type: "reference";
-			_weak?: boolean;
-			[internalGroqTypeReferenceTo]?: "sanity.imageAsset";
-		};
-		hotspot?: SanityImageHotspot;
-		crop?: SanityImageCrop;
-		alt?: string;
-		_type: "image";
-	};
-	avatar?: {
-		asset?: {
-			_ref: string;
-			_type: "reference";
-			_weak?: boolean;
-			[internalGroqTypeReferenceTo]?: "sanity.imageAsset";
-		};
-		hotspot?: SanityImageHotspot;
-		crop?: SanityImageCrop;
-		alt?: string;
-		_type: "image";
-	};
-	publishedAt?: string;
-	content?: string;
-}>;
 
 // Source: ./src/sanity/lib/services/get-all-services.ts
 // Variable: ALL_SERVICES_QUERY
@@ -839,9 +810,10 @@ export type SERVICE_META_QUERYResult = {
 
 // Source: ./src/sanity/lib/services/get-service-slugs.ts
 // Variable: SERVICE_SLUGS_QUERY
-// Query: *[_type == "service"]{    "slug": slug.current  }
+// Query: *[_type == "service"]{    "slug": slug.current,	_updatedAt  }
 export type SERVICE_SLUGS_QUERYResult = Array<{
 	slug: string | null;
+	_updatedAt: string;
 }>;
 
 // Source: ./src/sanity/lib/services/get-service.ts
@@ -935,6 +907,46 @@ export type SERVICE_QUERYResult = {
 	}> | null;
 } | null;
 
+// Source: ./src/sanity/lib/testimonials/get-all-testimonials.ts
+// Variable: ALL_TESTIMONIALS_QUERY
+// Query: *[_type == "testimonial"] | order(publishedAt asc)
+export type ALL_TESTIMONIALS_QUERYResult = Array<{
+	_id: string;
+	_type: "testimonial";
+	_createdAt: string;
+	_updatedAt: string;
+	_rev: string;
+	name?: string;
+	slug?: Slug;
+	role?: string;
+	logo?: {
+		asset?: {
+			_ref: string;
+			_type: "reference";
+			_weak?: boolean;
+			[internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+		};
+		hotspot?: SanityImageHotspot;
+		crop?: SanityImageCrop;
+		alt?: string;
+		_type: "image";
+	};
+	avatar?: {
+		asset?: {
+			_ref: string;
+			_type: "reference";
+			_weak?: boolean;
+			[internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+		};
+		hotspot?: SanityImageHotspot;
+		crop?: SanityImageCrop;
+		alt?: string;
+		_type: "image";
+	};
+	publishedAt?: string;
+	content?: string;
+}>;
+
 // Query TypeMap
 import "@sanity/client";
 declare module "@sanity/client" {
@@ -944,13 +956,13 @@ declare module "@sanity/client" {
 		'\n  *[_type == "caseStudy"]{\n    "slug": slug.current\n  }\n': CASE_STUDY_SLUGS_QUERYResult;
 		'*[\n  _type == "caseStudy"\n  && slug.current == $slug\n][0]{\n  publishedAt,\n  title,\n  mainImage,\n  excerpt,\n  body,\n  services[]->{\n    title,\n    "slug": slug.current,\n  },\n  period,\n  testimonial->{\n    name,\n    role,\n    content,\n    logo,\n  },\n}\n': CASE_STUDY_QUERYResult;
 		'*[\n  _type == "gallery"\n][]{\n  publishedAt,\n  title,\n  mainImage,\n  gallery[]{\n    _key,\n    alt,\n    asset->{\n      _id,\n      url\n    }\n  },\n   "slug": slug.current,\n}\n': ALL_GALLERIES_QUERYResult;
-		'\n  *[_type == "gallery"]{\n    "slug": slug.current\n  }\n': GALLERY_SLUGS_QUERYResult;
+		'\n  *[_type == "gallery"]{\n    "slug": slug.current,\n\t_updatedAt\n  }\n': GALLERY_SLUGS_QUERYResult;
 		'*[\n  _type == "gallery"\n    && slug.current == $slug\n][0]{\n  publishedAt,\n  title,\n  mainImage,\n  gallery[]{\n    _key,\n    alt,\n    asset->{\n      _id,\n      url\n    }\n  },\n   "slug": slug.current,\n}\n': GALLERY_QUERYResult;
-		'*[_type == "testimonial"] | order(publishedAt asc)': ALL_TESTIMONIALS_QUERYResult;
 		'*[\n  _type == "service"\n  && defined(slug.current)\n]| order(title asc){\n  title,\n  "slug": slug.current,\n  publishedAt,\n  excerpt,\n  icon,\n  mainImage,\n}': ALL_SERVICES_QUERYResult;
 		'*[\n  _type == "service"\n  && isFeatured == true\n  && defined(slug.current)\n]|order(publishedAt desc)[0...$quantity]{\n  title,\n  "slug": slug.current,\n  publishedAt,\n  mainImage,\n  excerpt,\n}': FEATURED_SERVICES_QUERYResult;
 		'*[\n  _type == "service"\n  && slug.current == $slug\n][0]{\n  title,\n  excerpt,  \n  seo {\n    metaTitle,\n    metaDescription,\n    canonicalUrl,\n    ogImage {\n      asset -> {\n        _id,\n        url\n      }\n    }\n  },\n}\n': SERVICE_META_QUERYResult;
-		'\n  *[_type == "service"]{\n    "slug": slug.current\n  }\n': SERVICE_SLUGS_QUERYResult;
+		'\n  *[_type == "service"]{\n    "slug": slug.current,\n\t_updatedAt\n  }\n': SERVICE_SLUGS_QUERYResult;
 		'*[\n  _type == "service"\n  && slug.current == $slug\n][0]{\n  publishedAt,\n  title,\n  mainImage,\n  excerpt,\n  body,\n  gallery[]{\n    _key,\n    alt,\n    asset->{\n      _id,\n      url\n    }\n  },\n  testimonials[]->{\n   "slug": slug.current,\n    name,\n    logo,\n    avatar,\n    content,\n  },\n}\n': SERVICE_QUERYResult;
+		'*[_type == "testimonial"] | order(publishedAt asc)': ALL_TESTIMONIALS_QUERYResult;
 	}
 }

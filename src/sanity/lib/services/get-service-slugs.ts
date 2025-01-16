@@ -3,7 +3,8 @@ import { defineQuery } from "next-sanity";
 
 const SERVICE_SLUGS_QUERY = defineQuery(/* groq */ `
   *[_type == "service"]{
-    "slug": slug.current
+    "slug": slug.current,
+	_updatedAt
   }
 `);
 

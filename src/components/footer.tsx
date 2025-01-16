@@ -149,7 +149,7 @@ export const FooterDefaults: Props = {
 		{
 			links: [
 				{ title: "Services", url: "/services" },
-				{ title: "Om os", url: "/#om-os" },
+				{ title: "Om os", url: "/om-os" },
 				{ title: "Galleri", url: "/galleri" },
 				{ title: "Kontakt", url: "/kontakt" },
 				{ title: "Få et tilbud", url: "/fa-et-tilbud" },

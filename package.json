@@ -7,7 +7,7 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
-		"typegen": "sanity schema extract --path=src/sanity/extract.json && sanity typegen generate && rm ./src/sanity/extract.json",
+		"typegen": "sanity schema extract --workspace production --path=src/sanity/extract.json && sanity typegen generate --workspace production && rm ./src/sanity/extract.json",
 		"prettier": "prettier --check .",
 		"format": "prettier --write .",
 		"prepare": "husky"
