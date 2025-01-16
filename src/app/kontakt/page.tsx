@@ -66,7 +66,7 @@ function Intro() {
 						))}
 						<div className="col-span-full">
 							<img
-								src="https://cdn.sanity.io/images/11915si6/production/fccd6cf84822a3fcf54662be0ff2582ade71d417-1400x650.jpg?fit=max&w=1200&h=1200&auto=format"
+								src="https://cdn.sanity.io/images/11915si6/production/4274b4768beb17174e3205a7d78901569b93081a-1170x487.jpg?auto=format"
 								alt=""
 								loading="lazy"
 								className="size-full rounded-lg object-cover shadow-xl outline-1 -outline-offset-1 outline-black/10"

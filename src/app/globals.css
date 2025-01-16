@@ -29,6 +29,15 @@ h6 {
 	}
 }
 
+@-webkit-keyframes loop-horizontally {
+	from {
+		-webkit-transform: translateX(0);
+	}
+	to {
+		-webkit-transform: translateX(-100%);
+	}
+}
+
 @keyframes loop-horizontally {
 	from {
 		transform: translateX(0);
@@ -39,6 +48,5 @@ h6 {
 }
 
 .animate-loop-horizontally {
-	animation: loop-horizontally 20s linear infinite;
-	-webkit-transform: translateZ(0); /* Safari hack */
+	animation: loop-horizontally 20s linear 0.1s infinite;
 }

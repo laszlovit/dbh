@@ -16,7 +16,7 @@ function AboutUs() {
 		<section className="px-[5%] py-8 md:py-12 lg:py-14">
 			<div className="mx-auto max-w-screen-2xl">
 				<div className="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
-					<div className="max-w-2xl space-y-6">
+					<div className="space-y-6 rounded-lg bg-white p-6 shadow-sm ring-1 ring-black/5 md:p-8 lg:p-20">
 						<p className="md:text-md">
 							De Blå Helte er en afdeling af CBL Service ApS, som ejes og administreres af Claus
 							Bjerrum Langendorff.
