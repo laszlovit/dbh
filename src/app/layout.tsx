@@ -1,4 +1,5 @@
 import { SanityLive } from "@/sanity/lib/live";
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
@@ -40,6 +41,7 @@ export default function RootLayout({
 			<body className={`${inter.variable} ${outfit.variable} bg-lightGray antialiased`}>
 				{children}
 				<SanityLive />
+				<Analytics />
 			</body>
 		</html>
 	);
