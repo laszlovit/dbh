@@ -30,6 +30,7 @@ type Contact = {
 	label: string;
 	phone: string;
 	email: string;
+	telefonTid: string;
 	cvr: string;
 };
 
@@ -80,6 +81,7 @@ export const Footer = (props: FooterProps) => {
 									>
 										{contact.email}
 									</a>
+									<p>Telefon tid: {contact.telefonTid}</p>
 									<p>{contact.cvr}</p>
 								</div>
 							</div>
@@ -133,6 +135,7 @@ export const FooterDefaults: Props = {
 		label: "Kontakt:",
 		phone: "+45 70 60 46 15",
 		email: "support@blaahelte.com",
+		telefonTid: "Alle dage 07.00 - 17.00",
 		cvr: "CVR: 43755315",
 	},
 	columnLinks: [
