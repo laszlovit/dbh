@@ -34,7 +34,7 @@ function Intro() {
 		{
 			icon: <PhoneIcon className="size-12" />,
 			title: "Telefonnummer",
-			description: "Ring til os alle dage 07 - 16",
+			description: "Ring til os alle dage 07 - 17",
 			link: {
 				label: "+45 70 60 46 15",
 				url: "tel:+4570604615",
