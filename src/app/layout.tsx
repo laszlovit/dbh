@@ -66,6 +66,7 @@ export default function RootLayout({
 						height="1"
 						width="1"
 						className="hidden"
+						alt="Facebbok Pixel Tracking"
 						src="https://www.facebook.com/tr?id=440234665723553&ev=PageView&noscript=1"
 					/>
 				</noscript>
