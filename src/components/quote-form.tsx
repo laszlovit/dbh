@@ -1,6 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -303,10 +304,10 @@ export default function QuoteForm() {
 					/>
 					<label htmlFor="terms" className="cursor-pointer">
 						Jeg accepterer{" "}
-						<a className="text-primary underline" href="#">
-							vilkårene
-						</a>{" "}
-						<span className="text-red-500">&#42;</span>
+						<Link className="text-primary underline" href="/privatlivspolitik" target="_blank">
+							privatlivspolitikken
+						</Link>
+						.<span className="text-red-500">&#42;</span>
 					</label>
 				</div>
 
