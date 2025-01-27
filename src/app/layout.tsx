@@ -40,6 +40,13 @@ export default function RootLayout({
 	return (
 		<html lang="da">
 			<Script
+				id="Cookiebot"
+				src="https://consent.cookiebot.com/uc.js"
+				data-cbid="d4f86742-ed85-49e3-aa71-6107484f5658"
+				data-blockingmode="auto"
+				strategy="afterInteractive"
+			/>
+			<Script
 				id="fb-pixel"
 				strategy="afterInteractive"
 				dangerouslySetInnerHTML={{
