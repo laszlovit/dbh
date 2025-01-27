@@ -161,7 +161,7 @@ export const FooterDefaults: Props = {
 	],
 	socialMediaLinks: [
 		{
-			url: "https://www.facebook.com/deblaahelte",
+			url: "https://www.facebook.com/profile.php?id=100078468962723",
 			icon: (
 				<svg
 					stroke="currentColor"
