@@ -23,7 +23,7 @@ const services = [
 	{ name: "Fliserens", href: "/services/fliserens" },
 	{ name: "Algebehandeling", href: "/services/algebehandeling" },
 	{ name: "Rens af tagrender", href: "/services/rens-af-tagrender" },
-	{ name: "Erhvervsrengøringr", href: "/services/erhvervsrengoring" },
+	{ name: "Erhvervsrengøring", href: "/services/erhvervsrengoring" },
 ];
 
 export default function Navbar() {
